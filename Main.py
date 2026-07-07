@@ -1,6 +1,5 @@
 import pygame, sys, random
 
-
 def ball_animation():
     global ball_speed_x, ball_speed_y, player_score, opponent_score, score_time
 
@@ -81,10 +80,6 @@ def ball_start():
         ball_speed_x = 7 * random.choice((1,-1))
         score_time = None
 
-
-
-
-
 # GENERAL SETUP
 pygame.mixer.pre_init(44100,-16,2,512)
 pygame.init()
@@ -106,14 +101,11 @@ bg_color = pygame.Color('#ADD8E6')
 accent_color = (27,35,43)
 middle_strip = pygame.Rect(WIN_width/2 - 2,0,4,WIN_height)
 
-
-
 # GAME VARIABELS
 ball_speed_x = 7 * random.choice((1,-1))
 ball_speed_y = 7 * random.choice((1,-1))
 player_speed = 0
 opponent_speed = 7
-
 
 # TEXT VARIABLES
 player_score = 0
@@ -121,12 +113,11 @@ opponent_score = 0
 game_font = pygame.font.Font("freesansbold.ttf",32)
 
 # SOUNDS
-pong_sound = pygame.mixer.Sound('/Users/techwiz2003/Desktop/TekGeek Pong/pong.ogg')
-score_sound = pygame.mixer.Sound('/Users/techwiz2003/Desktop/TekGeek Pong/score.ogg')
+pong_sound = pygame.mixer.Sound('/Users/techwiz2003/Desktop/Tek Pong/pong.ogg')
+score_sound = pygame.mixer.Sound('/Users/techwiz2003/Desktop/Tek Pong/score.ogg')
 
 # SCORE TIMER
 score_time = True
-
 
 # MAIN GAME LOOP
 while True:
@@ -146,8 +137,6 @@ while True:
             if event.key == pygame.K_UP:
                 player_speed += 7
 
-               
-
     # GAME LOGIC
     ball_animation()
     player_animation()
@@ -160,14 +149,6 @@ while True:
         opponent.top = 0
     if opponent.bottom >=WIN_height:
         opponent.bottom = WIN_height
-
-
-
-    
-
-    
-
-
 
     # Visuals
     WIN.fill(bg_color)
@@ -184,7 +165,6 @@ while True:
 
     opponent_text = game_font.render(f"{opponent_score}",False,'#00008B')
     WIN.blit(opponent_text,(200,470))
-
 
     # UPDATING THE WINDOW
     pygame.display.flip()
