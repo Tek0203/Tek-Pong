@@ -89,7 +89,7 @@ clock = pygame.time.Clock()
 WIN_width = 900
 WIN_height = 500
 WIN = pygame.display.set_mode((WIN_width, WIN_height))
-pygame.display.set_caption('TekGeek Pong')
+pygame.display.set_caption('Tek Pong')
 
 # GAME RECTANGLES
 ball =  pygame.Rect(WIN_width/2 - 15,WIN_height/2 - 15, 30, 30)
@@ -113,8 +113,8 @@ opponent_score = 0
 game_font = pygame.font.Font("freesansbold.ttf",32)
 
 # SOUNDS
-pong_sound = pygame.mixer.Sound('/Users/techwiz2003/Desktop/Tek Pong/pong.ogg')
-score_sound = pygame.mixer.Sound('/Users/techwiz2003/Desktop/Tek Pong/score.ogg')
+pong_sound = pygame.mixer.Sound('pong.ogg')
+score_sound = pygame.mixer.Sound('score.ogg')
 
 # SCORE TIMER
 score_time = True
