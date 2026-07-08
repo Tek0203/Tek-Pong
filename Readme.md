@@ -1,4 +1,4 @@
-Tek Pong is the debut game remade by developer Tek from Pong.
+Tek Pong is the debut game remade by developer Tek.
 Built with the Pygame library
 
 Requirements to play
